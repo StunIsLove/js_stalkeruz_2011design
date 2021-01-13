@@ -43,8 +43,18 @@
     // * Блок контента (форум, темы форума)
     if (document.querySelectorAll("body #page #fonepage #content .contenttop")[0]) {
       document.querySelectorAll("body #page #fonepage #content .contenttop")[0].style.cssText = "background:url(https://stalkeruz.com/stalker_images/pic_b/128b5c8a3e43cd5e4fc28ab671485619.png); background-repeat:no-repeat;";
-      document.querySelectorAll("body #page #fonepage #content .contentbody")[0].style.cssText = "background:url(https://stalkeruz.com/stalker_images/pic_b/1718dc15116f86cc38b50670649bb6b5.png); background-repeat:repeat-y;";
+      //document.querySelectorAll("body #page #fonepage #content .contentbody")[0].style.cssText = "background:url(https://stalkeruz.com/stalker_images/pic_b/1718dc15116f86cc38b50670649bb6b5.png); background-repeat:repeat-y;";
       document.querySelectorAll("body #page #fonepage #content .contentbottom")[0].style.cssText = "background:url(https://stalkeruz.com/stalker_images/pic_b/63effdc0fc55321d088d7961d22ba153.png); background-repeat:no-repeat;";
+
+    // * Блок внизу чата и фон чата
+      if (window.location.pathname == "/tribune") {
+        document.querySelectorAll("body #page #fonepage #content .contenttop")[1].style.cssText = "background:url(https://stalkeruz.com/stalker_images/pic_b/128b5c8a3e43cd5e4fc28ab671485619.png); background-repeat:no-repeat;";
+        document.querySelectorAll("body #page #fonepage #content .contentbottom")[1].style.cssText = "background:url(https://stalkeruz.com/stalker_images/pic_b/63effdc0fc55321d088d7961d22ba153.png); background-repeat:no-repeat;";
+        document.querySelector("body #page #fonepage #content #onlineusers.contentbody.speacial12").style.cssText = "background:url(https://stalkeruz.com/stalker_images/pic_b/c298848de9fcd787ff5997c6f3832c25.png); background-repeat: repeat-y;";
+        document.querySelector("body #page #fonepage #ul-tribune-page.tribune-posts.tribune-page").style.cssText = `background: url(https://stalkeruz.com/stalker_images/pic_b/c298848de9fcd787ff5997c6f3832c25.png); background-repeat: repeat-y;`;
+      } else {
+        document.querySelectorAll("body #page #fonepage #content .contentbody")[0].style.cssText = "background:url(https://stalkeruz.com/stalker_images/pic_b/1718dc15116f86cc38b50670649bb6b5.png); background-repeat:repeat-y;";
+      }
     }
 
     // ================================== Область querySelectorAll ================================== //
@@ -73,14 +83,5 @@
           sidebar_content[j].style.cssText = "background:url(https://stalkeruz.com/stalker_images/pic_b/88ec78775f22d4af3a012e11fe9144e2.png); background-repeat:repeat-y;";
           sidebar_footer[j].style.cssText = "background:url(https://stalkeruz.com/stalker_images/pic_b/936848fe1e4b0569b3d662b3433ba6e2.png); background-repeat:no-repeat;";
         }
-    }
-
-    if (window.location.pathname == "/tribune") {
-      document.querySelectorAll("body #page #fonepage #content .contenttop")[1].style.cssText = "background:url(https://stalkeruz.com/themes/stalker/images/contenttop.png); background-repeat:no-repeat;";
-      document.querySelectorAll("body #page #fonepage #content .contentbody")[1].style.cssText = "background:url(https://stalkeruz.com/themes/stalker/images/contentbody.png); background-repeat:repeat-y;";
-      document.querySelectorAll("body #page #fonepage #content .contentbottom")[1].style.cssText = "background:url(https://stalkeruz.com/themes/stalker/images/contentbottom.png); background-repeat:no-repeat;";
-
-      document.querySelector("body #page #fonepage #ul-tribune-page").style.cssText = `background: url(https://stalkeruz.com/stalker_images/pic_b/c298848de9fcd787ff5997c6f3832c25.png); background-repeat: repeat-y;`;
-
     }
 })();
